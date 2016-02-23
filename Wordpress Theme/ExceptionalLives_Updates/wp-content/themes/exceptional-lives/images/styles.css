@@ -1,0 +1,1570 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Cabin-regular", "myriad pro", serif;
+	font-size: 14px;
+}
+
+body a {
+	text-decoration: none;
+}
+
+body h1 {
+	font-size: 60px;
+	font-weight: 400;
+}
+
+body h2 {
+	font-size: 36px;
+	font-weight: 100;
+}
+
+body h3 {
+	font-size: 24px;
+	font-weight: 100;
+}
+
+body h3.small {
+	font-size: 14px;
+}
+
+body p {
+	font-size: 1.1em;
+}
+
+@media screen and (max-width: 300px) {
+	body p {
+		font-size: 14px;
+	}
+}
+
+body .orangeText {
+	color: #f3a437;
+}
+
+body .blueText {
+	color: rgb(48,89,152);
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f3a437;
+	color: #fff;
+	width: 270px;
+	height: 48px;
+	border-bottom: 4px solid #c3832c;
+	border-radius: 4px;
+	padding-top: 5px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.button:hover {
+	background-color: #e98d0e;
+	cursor: pointer;
+}
+
+.buttonStackSpacing {
+	margin: 10px 0;
+}
+
+#widthWrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width:1200px) {
+	#widthWrapper {
+		width: 95%;
+	}
+}
+
+header {
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	height: 100px;
+	z-index: 100;
+	box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+
+#widthWrapper.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#widthWrapper.flex.fullHeight {
+	height: 100%;
+}
+
+#widthWrapper.flex.wrap {
+	flex-wrap: wrap;
+}
+
+header nav {
+	display: flex;
+}
+
+header nav a {
+	color: #337ab7;
+	font-size: 17px;
+	margin: 0 0 0 20px;
+	padding: 42px 10px;
+	font-family: 'Cabin-SemiBold';
+}
+
+header nav a:hover {
+	background-color: rgba(248,185,108, .1);
+}
+
+header .hamburgerDropdownWrap {
+	max-width: 30px;
+	display: none;
+	right: 30px;
+	position: absolute;
+	top: 16px;
+}
+
+header .hamburgerDropdownWrap .hamburger {
+	width: 100%;
+}
+
+@media screen and (max-width: 1015px) {
+	header {
+		height: 60px;
+	}
+
+	header .logo {
+		width: 60%;
+		min-width: 130px;
+	}
+
+	header nav {
+		display: none;
+	}
+
+	header .hamburgerDropdownWrap {
+		display: block;
+	}
+}
+
+header .hamburgerDropdownWrap .mobileDropdown {
+	background-color: #fff;
+	position: absolute;
+	z-index: 100;
+	list-style: none;
+	right: 0;
+	top: 44px;
+	width: 180px;
+	border-left: 1px solid rgb(48,89,152);
+	border-bottom: 1px solid rgb(48,89,152);
+	border-right: 1px solid rgb(48,89,152);
+}
+@media screen and (max-width: 420px) {
+	header .hamburgerDropdownWrap .mobileDropdown {
+		top: 40px;
+	}
+}
+
+header .hamburgerDropdownWrap .mobileDropdown li a {
+	margin: 0;
+	padding: 15px 0px 15px 10px;
+	display: block;
+	color: rgb(48,89,152);;
+	width: 100%;
+}
+
+header .hamburgerDropdownWrap .mobileDropdown li a:hover {
+	color: #f3a437;
+}
+
+main {
+	color: #333;
+	position: relative;
+	top: 100px;
+	padding-bottom: 60px;
+}
+
+@media screen and (max-width: 1015px) {
+	main {
+		top: 60px;
+	}
+}
+
+main#homePage {
+	padding-bottom: 0;
+}
+
+.socialIconsWrap {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.socialIconsWrap i {
+	font-family: FontAwesome;
+	color: #f9efa3;
+	background-color: #f3a437;
+	font-style: normal;
+	display: flex;
+	height: 30px;
+	width: 30px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	border-bottom: 2px solid #c3832c;
+}
+
+.socialIconsWrap i:hover {
+	background-color: #e98d0e;
+}
+
+.socialIconsWrap .facebookIcon::before {
+	content: "\f09a";
+}
+
+.socialIconsWrap .twitterIcon::before {
+	content: "\f099";
+}
+
+.socialIconsWrap .linkedinIcon::before {
+	content: "\f0e1";
+}
+
+.socialIconsWrap .instagramIcon::before {
+	content: "\f16d";
+}
+
+section {
+	position: relative;
+	text-align: center;
+	padding: 70px 0;
+}
+
+@media screen and (max-width: 420px) {
+	section {
+		padding: 40px 0;
+	}
+}
+
+section.secOne, section.secFive {
+	background-image:url(wide-bg.jpg);
+	padding: 0;
+	background-size: 100%;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+	section.secOne, section.secFive {
+		background-image: inherit;
+	}
+
+	section.secOne #widthWrapper, section.secFive #widthWrapper {
+		width: 100%;
+	}
+}
+
+section.secOne .mariaImage {
+	margin: 60px 0;
+}
+
+@media screen and (max-width: 420px) {
+	section.secOne .mariaImage {
+		margin: 30px 0;
+	}
+}
+
+section.secOne .meetMaria {
+	margin-bottom: 20px;
+}
+
+section.secThree {
+	background-color: #fffad4;
+}
+
+section.secTwo, section.secFour {
+	background-color: #efefef;
+}
+
+section.secTwo .laptop {
+	margin-bottom: 60px;
+}
+
+section.secTwo h2, section.secFive h1 {
+	margin-bottom: 30px;
+}
+
+section.secTwo h2:last-child {
+	margin-bottom: 0;
+}
+
+section.secThree h2 {
+	margin: 40px 0 60px;
+}
+
+section.secThree h2:last-child {
+	margin-bottom: 0;
+}
+
+section.secThree .squareImg {
+	border: 3px solid #325a96;
+}
+
+@media screen and (max-width: 590px) {
+	section.secThree .squareImg {
+		width: 100%;
+	}
+}
+
+section.secFour h2 {
+	margin-top: 30px;
+}
+
+section.secFive h2 {
+	margin-bottom: 50px;
+}
+
+form input {
+	height: 36px;
+	width: 100%;
+	padding-left: 10px;
+	font-size: 16px;
+	outline: none;
+	border: 1px solid #ccc;
+}
+
+form label {
+	font-size: 13px;
+}
+
+form label a {
+	display: block;
+	color: inherit;
+	text-decoration: underline;
+}
+
+form label a:hover {
+	text-decoration: none;
+}
+
+section aside form .asideFormRow {
+	margin: 20px 0 80px;
+}
+
+section aside form .asideFormRow label {
+	display: block;
+	float: left;
+}
+
+section aside form .button.subscribe {
+	float: right;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	width: initial;
+	font-size: 13px;
+	display: block;
+	padding: 3px 5px 0;
+	height: 36px;
+	border-bottom-width: 2px;
+}
+
+section .central {
+	width: 70%;
+	float: left;
+	background-color: #fffad4;
+	padding: 70px 20px 70px 0;
+}
+
+section .central .buttonStackSpacing {
+	margin: 10px auto;
+}
+
+section aside {
+	width: 30%;
+	background-color: #f9efa3;
+	text-align: initial;
+	padding: 70px 0 0 40px;
+	float: left;
+}
+
+section aside .button {
+	width: 100%;
+}
+
+section aside .donate {
+	margin-top: 50px;
+}
+
+section aside h3 {
+	margin-bottom: 10px;
+}
+
+section aside .button.firstBut {
+	margin-top: 15px;
+}
+
+section aside .guidestarSilver {
+	display: block;
+	width: 110px;
+	margin: 15px auto;
+	padding-bottom: 15px;
+}
+
+footer {
+	padding: 30px 0;
+	background-color: #fff;
+}
+
+@media screen and (max-width: 1160px) {
+	section aside form .asideFormRow {
+		display: block;
+	}
+
+	section aside form .button.subscribe {
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+
+	main#homePage h1 {
+		font-size: 40px;
+	}
+
+	main#homePage h2 {
+		font-size: 30px;
+	}
+
+	section .central, section aside {
+		width: 100%;
+		padding: 70px 20px;
+	}
+
+	section aside {
+		position: initial;
+		height: initial;
+		width: 100%;
+		text-align: center;
+		padding: 40px 20px 20px;
+	}
+
+	section aside p {
+		text-align: left;
+	}
+
+	section aside form {
+		width: 50%;
+	}
+
+	@media screen and (max-width: 420px) {
+		section aside form, section .central .buttonStackSpacing {
+			width: 100%;
+		}
+	}
+
+	.buttonStackSpacing {
+		margin: 10px auto;
+	}
+
+	section.secFive aside {
+		text-align: initial;
+	}
+
+	section aside form .asideFormRow {
+		margin: 20px 0 40px;
+	}
+
+	section.secFive h2 {
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	main#homePage h1 {
+		font-size: 30px;
+	}
+
+	main#homePage h2 {
+		font-size: 20px;
+	}
+
+	main#homePage .homeLargeImage {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	main#homePage h1 {
+		font-size: 24px;
+	}
+
+	main#homePage h2 {
+		font-size: 18px;
+	}
+
+	header .hamburgerDropdownWrap {
+		right: 10px;
+		top: 20px;
+	}
+
+	header .hamburgerDropdownWrap .hamburger {
+		width: 75%;
+	}
+
+	section .central, section aside {
+		padding: 40px 20px;
+	}
+}
+
+
+
+/*about us*/
+
+main#aboutUs-ourExperts h2 {
+	font-size: 24px;
+}
+
+main#aboutUs-ourExperts h1 {
+	font-size: 36px;
+}
+
+.aboutUs-ourExpertsSection.one {
+	background-image: url(../assets/harvardCampus.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.aboutUs-ourExpertsSection.two {
+	background-color: #325a96;
+	color: #fff;
+	text-align: center;
+}
+
+.aboutUs-ourExpertsSection.two h1.theTeam {
+	margin-bottom: 60px;
+	padding-top: 80px;
+}
+
+.harvardOverlay {
+	background-color: rgba(248,185,108, .85);
+}
+
+.aboutUs-ourExpertsSection.one h2 {
+	padding: 95px 0;
+	line-height: 36px;
+}
+
+main#aboutUs-ourExperts .widthWrapper {
+	width: 760px;
+	margin: 0 auto;
+}
+
+
+
+.aboutUs-ourExpertsSection .flexWrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio {
+	width: 334px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio img {
+	border-radius: 50%;
+	border: 7px solid #f3a437;
+	width: 244px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio .name {
+	font-size: 28px;
+	margin-top: 15px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio p {
+	font-size: 14px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio p.bioWriteup {
+	text-align: initial;
+	margin-top: 20px;
+	margin-bottom: 60px;
+	line-height: 23px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection.three {
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper {
+	flex-wrap: initial;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio {
+	width: 32%;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio h1 {
+	font-size: 28px;
+	margin-bottom: 15px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection.three h1.boardOfDirectors {
+	padding-top: 80px;
+	margin-bottom: 60px;
+}
+
+#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio p {
+	text-align: initial;
+	line-height: 23px;
+}
+
+footer.footerBlue {
+	background-color: #325a96;	
+	height: 145px;
+	color: #fff;
+	position: relative;
+}
+
+footer.footerBlue.borderTop {
+	border-top: 5px solid #254d8d;
+}
+
+footer.footerBlue .socialIconsWrap i {
+	background-color: #fff;
+	color: #325a96;
+	border-bottom: none;
+}
+
+footer.footerBlue .socialIconsWrap i:hover {
+	background-color: #eee;
+}
+
+footer.footerBlue h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+footer.footerBlue p, footer.footerBlue p a {
+	font-size: 12px;
+	color: #b5d3ff;
+	text-align: right;
+}
+
+footer.footerBlue .right p {
+	margin-top: 5px;
+}
+
+footer.footerBlue p {
+	margin-top: 15px;
+}
+
+footer.footerBlue p a {
+	text-decoration: underline;
+}
+
+footer.footerBlue p a:hover {
+	text-decoration: none;
+}
+
+footer.footerBlue form {
+	padding-bottom: 43px;
+}
+
+footer.footerBlue form input {
+	float: left;
+}
+
+footer.footerBlue form input.emailField {
+	width: 230px;
+	margin-right: 10px;
+}
+
+footer.footerBlue form input.button {
+	width: initial;
+	float: right;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	padding: 5px 10px;
+	height: 36px;
+}
+
+footer.footerBlue form input.button:hover {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 860px) {
+
+	.aboutUs-ourExpertsSection.one {
+		background-size: cover;
+		height: initial;
+	}
+
+	main#aboutUs-ourExperts .widthWrapper {
+		width: 90%;
+	}
+
+	main#aboutUs-ourExperts h2 {
+		font-size: 18px;
+		padding: 95px 15px;
+	}
+
+	.aboutUs-ourExpertsSection .flexWrapper {
+		display: block;
+		padding-bottom: 16px;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio {
+		width: 100%;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection.three {
+		padding-bottom: 30px;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio {
+		width: 100%;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection.three h1.boardOfDirectors {
+		padding-top: 50px;
+		margin-bottom: 40px;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio h1 {
+		margin-bottom: 10px;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio p {
+		margin-bottom: 30px;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection.three .flexWrapper .directorBio p {
+		font-size: 14px;
+	}
+
+	footer.footerBlue, footer.footerBlue #widthWrapper.flex.fullHeight {
+		height: inherit;
+	}
+
+	footer.footerBlue #widthWrapper.flex {
+		display: block;
+	}
+
+	footer.footerBlue .copyright {
+		position: absolute;
+		bottom: 8px;
+	}
+
+	footer.footerBlue p, footer.footerBlue p a {
+		text-align: left;
+		margin: 10px 0 5px;
+	}
+
+	footer.footerBlue h2 {
+		margin-bottom: 5px;
+	}
+
+	footer.footerBlue .right h2 {
+		margin-top: 15px;
+	}
+
+	footer.footerBlue form input.button {
+		float: none;
+	}
+
+	footer.footerBlue form {
+		padding-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	main#aboutUs-ourExperts h2 {
+		padding: 50px 15px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	footer.footerBlue {
+		padding-bottom: 40px;
+	}
+
+	footer.footerBlue form input {
+		float: none;
+	}
+
+	footer.footerBlue form input, footer.footerBlue form input.button {
+		margin: 4px 0;
+		height: 30px;
+	}
+
+	footer.footerBlue form input.emailField {
+		width: 100%;
+	}
+
+	footer.footerBlue h2 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	main#aboutUs-ourExperts h2 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	#aboutUs-ourExperts .aboutUs-ourExpertsSection .flexWrapper .bio img {
+		width: 150px;
+	}
+
+	.aboutUs-ourExpertsSection.two h1.theTeam {
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	footer.footerBlue h2 {
+		font-size: 16px;
+	}
+
+	footer.footerBlue p, footer.footerBlue p a {
+		font-size: 10px;
+	}
+}
+
+/*our vision*/
+
+
+
+main#ourVision .bgImage {
+	height: 430px;
+	color: #fff;
+	background-size: cover;
+}
+
+main#ourVision section {
+	border-bottom: 8px solid rgb(48,89,152);
+}
+
+main#ourVision .secOne{
+	background-image: url(../assets/boy-walking.jpg);	
+}
+
+main#ourVision .secTwo .flex {
+	display: flex;
+}
+
+main#ourVision .secThree {
+	background-image: url(../assets/man-and-child.jpg);
+	height: 500px;
+}
+
+.overlay {
+	background-color: rgba(248,185,108, .5);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.overlay .bannerConstrain {
+	width: 780px;
+	margin: 40px auto;
+}
+
+.overlay .bannerConstrain p {
+	font-size: 4em;
+	line-height: 1.15em;
+}
+
+main#ourVision .secTwo {
+	background-color: #fff;
+	text-align: left;
+}
+
+main#ourVision .secTwo .left, main#ourVision .secTwo .right {
+	width: 50%;
+}
+
+main#ourVision .secTwo .left ul {
+	position: relative;
+	left: 40px;
+}
+
+main#ourVision .secTwo .left ul li {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+main#ourVision .secTwo h3 {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+
+main#ourVision .secTwo .quote {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+main#ourVision .secTwo .quote img {
+	position: absolute;
+	left: -40px;
+}
+
+@media screen and (max-width: 980px) {
+	main#ourVision section {
+		padding: 50px 0;
+	}
+
+	main#ourVision .bgImage {
+		height: 315px;
+	}
+
+	.overlay .bannerConstrain {
+		width: 400px;
+	}
+
+	.overlay .bannerConstrain p {
+		font-size: 2em;
+		line-height: 1.4em;
+	}
+
+	main#ourVision .secTwo .flex {
+		display: block;
+		width: 80%;
+	}
+
+	main#ourVision .secTwo .left, main#ourVision .secTwo .right {
+		width: 100%;
+	}
+
+	main#ourVision .secTwo .left {
+		margin-bottom: 30px;
+	}
+
+	main#ourVision .secTwo .quote, main#ourVision .secTwo .quote img {
+		position: initial;
+	}
+
+	main#ourVision .secTwo .quote img {
+		margin-right: 10px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	main#ourVision .bgImage {
+		background-position: -200px 0;
+		height: 400px;
+	}
+
+	.overlay .bannerConstrain {
+		width: 90%;
+	}
+
+	main#ourVision .secThree .overlay .bannerConstrain {
+		margin: 25px auto;
+	}
+
+	.overlay .bannerConstrain p {
+		font-size: 1.8em;
+	}
+}
+
+/*contact us*/
+
+body#contactUsBody {
+	background-color: rgb(48,89,152);
+}
+
+main#contactUs {
+	background-image: url(../assets/harvardCampus.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 800px;
+	position: relative;
+}
+
+main#contactUs .harvardOverlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+main#contactUs .overlayWrapper {
+	width: 50%;
+	margin: 100px auto 0;
+}
+
+main#contactUs .overlayWrapper h3 {
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+
+main#contactUs .overlayWrapper p {
+	margin-bottom: 15px;
+}
+
+main#contactUs .overlayWrapper form input {
+	margin-bottom: 15px;
+	border: 2px solid #d59439;
+}
+
+form textarea {
+	width: 100%;
+	height: 200px;
+	border: 2px solid #d59439;
+	font-size: 16px;
+	padding: 10px;
+	outline: none;
+}
+
+main#contactUs .overlayWrapper form .button {
+	background-color: rgb(48,89,152);	
+	border: none;
+	border-bottom: 4px solid #1a3763;
+	float: right;
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+	main#contactUs .overlayWrapper form .button {
+		width: 100%;
+	}	
+}
+
+@media screen and (max-width: 670px) {
+	main#contactUs .overlayWrapper {
+		width: 90%;
+	}	
+}
+
+/*blog*/
+
+main#blog {
+	background-color: #efefef;
+}
+
+main#blog .blogWrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 70px;
+}
+
+main#blog section.mainArea {
+	width: 73%;
+	padding: 0;
+}
+
+main#blog .topRow {
+
+}
+
+main#blog .topRow.comments {
+	text-align: left;
+	margin-bottom: 80px;
+}
+
+main#blog .topRow.comments h1.commentNumberHeading {
+	padding-top: 35px;
+}
+
+main#blog .topRow.comments .commentsRow {
+	margin: 10px 0;
+	position: relative;
+	padding: 30px 0 30px 100px;
+	border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 420px) {
+	main#blog .topRow.comments .commentsRow {
+		padding: 30px 0 30px;
+	}
+
+	main#blog .topRow.comments .commentsRow img {
+		display: none;
+	}
+}
+
+main#blog .topRow.comments .commentsRow img, main#blog .topRow.comments .commentsRow .button.reply {
+	position: absolute;
+	top: 30px;
+}
+
+@media screen and (max-width: 250px) {
+	main#blog .topRow.comments .commentsRow .button.reply {
+		position: initial;
+		margin-top: 10px !important;
+	}	
+}
+
+main#blog .topRow.comments .commentsRow img {
+	left: 0;
+}
+
+main#blog .topRow.comments .commentsRow .button.reply {
+	right: 0;
+	margin: 0;
+	padding: 6px 16px 1px;
+	text-align: center;
+	width: initial;
+	background-color: #eee;
+	border-color: #ccc;
+	color: #333;
+}
+
+@media screen and (max-width: 1000px) {
+	main#blog .topRow.comments .formWrap form .button {
+		text-align: center;
+	}
+}
+
+main#blog .topRow.comments .commentsRow .button.reply:hover {
+	background-color: #ddd;
+}
+
+main#blog .topRow.comments .commentsRow .commenter {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+main#blog .topRow.comments .commentsRow p {
+	margin: 12px 0 0;
+}
+
+main#blog .topRow.comments .formWrap {
+}
+
+main#blog .topRow.comments .formWrap form {
+}
+
+main#blog .topRow.comments .formWrap form .inlineInputRow {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 350px) {
+	main#blog .topRow.comments .formWrap form .inlineInputRow {
+		display: block;
+	}
+
+	main#blog .topRow.comments .formWrap form .inlineInputRow input {
+		width: 100% !important;
+		margin-bottom: 10px;
+	}
+
+	main#blog .topRow.comments .formWrap form .inlineInputRow input:last-child {
+		margin-bottom: 0;
+	}
+}
+
+main#blog .topRow.comments .formWrap form .inlineInputRow input {
+	width: 32%;
+}
+
+main#blog .topRow.comments .formWrap form textarea {
+	border: 1px solid #ccc;
+}
+
+main#blog .topRow.comments .formWrap form .button {
+	margin: 20px 0 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+}
+
+main#blog .botRow {
+	margin-top: 35px;
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 870px) {
+	main#blog .botRow {
+		margin-bottom: 35px;
+	}
+}
+
+main#blog .botRow.blogPostBotRow {
+	margin-top: 20px;
+}
+
+main#blog aside {
+	width: 25%;
+}
+
+main#blog .blogBox {
+	background-color: #fff;
+	padding: 0 25px 75px;
+	position: relative;
+	box-shadow: 1px 1px 2px #ddd;
+}
+
+main#blog .blogBox .exerpt {
+	text-align: initial;
+}
+
+main#blog h1 {
+	font-family: "times new roman";
+	font-size: 30px;
+}
+
+main#blog h1.popularPosts {
+	text-align: left;
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 420px) {
+	main#blog h1.popularPosts {
+		padding-left: 25px;
+	}
+}
+
+main#blog .headingCat {
+	font-size: 12px;
+	padding: 35px 0 10px;
+}
+
+main#blog .publishDate {
+	font-size: 14px;
+	border-bottom: 1px solid #f3a437;
+	width: 118px;
+	margin: 20px auto;
+	padding-bottom: 10px;
+}
+
+main#blog .button {
+	display: block;
+	width: 230px;
+	margin: 35px auto 15px;
+	height: initial;
+	padding: 10px 20px 8px;
+}
+
+main#blog .blogBox .footer {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 35px;
+	border-top: 1px solid #ddd;
+}
+
+main#blog .blogBox .footer div {
+	width: 33.333333%;
+	display: flex;
+	align-items: center;
+	border-right: 1px solid #ddd;
+}
+
+main#blog .blogBox .footer div img {
+	display: block;
+}
+
+main#blog .blogBox .footer div:last-child {
+	border-right: 0;
+	justify-content: center;
+}
+
+main#blog .blogBox .footer div a {
+	width: 100%;
+	padding: 8px;
+	color: #333;
+}
+
+main#blog .blogBox .footer div a:hover {
+	background-color: #ddd;
+}
+
+main#blog .blogBox .footer div:last-child a {
+	width: initial;
+}
+
+main#blog .botRow .blogBox {
+	width: 48%;
+}
+
+main#blog .botRow .blogBox.orange {
+	background-color: #f3a437;
+	color: #fff;
+	padding: 0 25px 20px;
+}
+
+main#blog .blogBox .headerImage {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+
+main#blog .botRow .blogBox .blogBoxHeader.withImage {
+	margin-top: 66%;
+}
+
+main#blog .blogBox .blogBoxHeader.withImage.large {
+	padding-top: 66%;
+}
+
+main#blog .blogBox .footer .setWidth {
+	width: 50%;
+}
+
+main#blog .blogAside .blogBox {
+	padding-bottom: 0;
+}
+
+main#blog .blogAside .blogBox:last-child {
+	margin-top: 30px;
+}
+
+main#blog .blogAside .blogBox h2 {
+	font-size: 20px;
+	font-family: "times new roman";
+	text-align: center;
+	padding: 25px 0 20px;
+}
+
+main#blog .blogAside .blogBox a {
+	display: block;
+	color: #333;
+	margin-left: -25px;
+    margin-right: -25px;
+    padding: 0 15px;
+}
+
+main#blog .blogAside .blogBox a:hover {
+	background-color: #ddd;
+}
+
+main#blog .blogAside .blogBox .blogBoxAsideRow {
+	display: flex;
+	border-top: 1px solid #ddd;
+	padding: 20px 0;
+	margin-top: -1px;
+}
+
+main#blog .blogAside .blogBox .blogBoxAsideRow .right {
+	margin-left: 10px;
+}
+
+main#blog .blogAside .blogBox .blogBoxAsideRow h3 {
+	font-size: 14px;
+}
+
+main#blog .blogAside .blogBox .blogBoxAsideRow .right p {
+	font-size: 12px;
+	color: #888;
+}
+
+@media screen and (max-width: 1000px) {
+	main#blog .botRow {
+		display: block;
+	}
+
+	main#blog .botRow .blogBox {
+		width: 100%;
+	}
+
+	main#blog .botRow .blogBox .headerImage {
+		position: initial;
+	}
+
+	main#blog .botRow .blogBox .blogBoxHeader.withImage {
+		margin-top: 0;
+	}
+
+	main#blog .botRow .blogBox:nth-child(2) {
+		margin-top: 35px;
+		padding: 0 0 75px;
+	}
+
+	main#blog .botRow .blogBox:nth-child(2) .exerpt {
+		padding: 0 25px;
+	}
+
+	main#blog .botRow .blogBox.orange {
+		padding: 0 0 10px;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	main#blog .blogWrapper {
+		display: block;
+	}
+
+	main#blog section.mainArea, main#blog aside {
+		width: 100%;
+	}
+
+	main#blog aside {
+		padding-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	main#blog h1 {
+		font-size: 24px;
+	}
+
+	main#blog .button {
+		width: 100%;
+	}
+
+	main#blog .button.specialButton {
+		width: 80%;
+	}
+
+	main#blog .topRow .blogBox .footer div {
+		width: 50%;
+	}
+
+	main#blog .blogBox .footer div:last-child {
+		display: none;
+	}
+
+	main#blog .blogBox .footer .setWidth {
+		width: 100%;
+	}
+
+	main#blog .blogWrapper {
+		width: 100%;
+		padding-top: 35px;
+	}
+
+	footer .footerFlexWrapper {
+		width: 90%;
+	}
+}
+
+main#partners .secOne {
+	background-image: url(../assets/men-talking.jpg);
+	height: 275px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main#partners .secOne .overlay {
+	background-color: rgba(248,185,108, .85);
+}
+
+main#partners .secOne .bannerConstrain {
+	margin: 90px auto;
+}
+
+main#partners .secOne .bannerConstrain p {
+	font-size: 24px;
+	line-height: 36px;
+}
+
+main#partners .secTwo {
+	background-color: rgb(48,89,152);
+	padding-top: 0;
+}
+
+main#partners .secTwo h2 {
+	background-color: #254d8d;
+	color: #fff;
+	padding: 10px;
+}
+
+main#partners .secTwo a {
+	width: 252px;
+	position: relative;
+	margin: 30px 8px;
+	padding: 0 0 50px 0;
+}
+
+main#partners .secTwo .partner {
+	width: 100%;
+	background-color: #fff;
+	padding: 10px;
+}
+
+main#partners .secTwo .partner .logoWrap {
+	margin: 0 auto;
+	height: 134px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+main#partners .secTwo a p {
+	position: absolute;
+	width: 240px;
+	color: #fec679;
+	top: 165px;
+	transition: .3s;
+}
+
+main#partners .secTwo a:hover p {
+	color: #f3a437;;
+}
+
+main#partners .secTwo .partner .logoWrap.till {background-image: url(../assets/till-logo.jpg);} main#partners .secTwo .partner .logoWrap.emarc {background-image: url(../assets/emarc-logo.jpg);}main#partners .secTwo .partner .logoWrap.waypoint {background-image: url(../assets/waypoint-logo.jpg);}main#partners .secTwo .partner .logoWrap.pyd {background-image: url(../assets/pyd-logo.jpg);}main#partners .secTwo .partner .logoWrap.kidsFirst {background-image: url(../assets/kids-first-logo.jpg);}main#partners .secTwo .partner .logoWrap.dds {background-image: url(../assets/dds-logo.jpg);}main#partners .secTwo .partner .logoWrap.bestBuddies {background-image: url(../assets/best-buddies-logo.jpg);}main#partners .secTwo .partner .logoWrap.specialOlympics {background-image: url(../assets/special-olympics-ma-logo.jpg);}main#partners .secTwo .partner .logoWrap.bridgeCenter {background-image:url(../assets/bridge-center-logo.jpg);} main#partners .secTwo .partner .logoWrap.bshc {background-image:url(../assets/bshc-logo.jpg);}main#partners .secTwo .partner .logoWrap.ashpac {background-image:url(../assets/ashpac-logo.jpg);} main#partners .secTwo .partner .logoWrap.braintreeSepac {background-image:url(../assets/braintree-sepac-logo.jpg);} main#partners .secTwo .partner .logoWrap.fhc {background-image:url(../assets/fhc-logo.jpg);} main#partners .secTwo .partner .logoWrap.ccsn {background-image:url(../assets/ccsn-logo.jpg);} main#partners .secTwo .partner .logoWrap.mafc {background-image: url(../assets/mafc-logo.jpg);} main#partners .secTwo .partner .logoWrap.ffcwsn {background-image: url(../assets/ffcwsn-logo.jpg);}main#partners .secTwo .partner .logoWrap.arcOfMass {background-image: url(../assets/arc-of-mass-logo.jpg);} main#partners .secTwo .partner .logoWrap.bostonSpedpac {background-image: url(../assets/boston-spedpac-logo.jpg);} main#partners .secTwo .partner .logoWrap.wmpa {background-image: url(../assets/wmpa-logo.jpg);}main#partners .secTwo .partner .logoWrap.ftal {background-image: url(../assets/ftal-logo.jpg);}main#partners .secTwo .partner .logoWrap.thriveInFive {background-image: url(../assets/thrive-in-5-logo.jpg);}main#partners .secTwo .partner .logoWrap.fii {background-image: url(../assets/fii-logo.jpg);}main#partners .secTwo .partner .logoWrap.mrc {background-image: url(../assets/mrc-logo.jpg);}main#partners .secTwo .partner .logoWrap.mhsf {background-image: url(../assets/mhsf-logo.jpg);} main#partners .secTwo .partner .logoWrap.ici {background-image: url(../assets/ici-logo.jpg);}
+
+main#partners .secTwo .partner .logoWrap img {
+	width: 252px;
+}
+
+@media screen and (max-width: 980px) {
+	main#partners .secOne .bannerConstrain {
+		margin: 30px auto;
+	}
+}
+
+@media screen and (max-width: 565px) {
+	#widthWrapper.flex.wrap {
+		display: block;
+	}	
+
+	main#partners .secTwo a {
+		width: 100%;
+		display: block;
+		margin: 30px 0;
+		position: static;
+		padding: 0 0 20px 0;
+	}
+
+	main#partners .secTwo a p {
+		position: static;
+		width: inherit;
+		margin-top: 15px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	main#partners .secOne {
+		background-position: -300px 0;
+	}
+
+	main#partners .secOne .bannerConstrain p {
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
+@media screen and (max-width: 280px) {
+	main#partners .secOne .bannerConstrain {
+		margin: 10px 0;
+	}
+
+	main#partners .secOne .bannerConstrain p {
+		font-size: 18px;
+		line-height: 28px;
+	}	
+}
